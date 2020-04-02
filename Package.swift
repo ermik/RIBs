@@ -9,7 +9,8 @@ let package = Package(
     platforms: [.iOS(.v10)],
     products: [
         .library(name: "RIBs", type: .static, targets: ["RIBs"]),
-        .library(name: "RIBs", type: .dynamic, targets: ["RIBs"])
+        .library(name: "RIBsStatic", type: .static, targets: ["RIBs"]),
+        .library(name: "RIBsDynamic", type: .dynamic, targets: ["RIBs"])
     ],
     dependencies: [
         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.0.0")),
