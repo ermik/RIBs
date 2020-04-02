@@ -8,10 +8,11 @@ let package = Package(
     name: "RIBs",
     platforms: [.iOS(.v10)],
     products: [
-        .library(name: "RIBs", type: .static, targets: ["RIBs"])
+        .library(name: "RIBs", type: .static, targets: ["RIBs"]),
+        .library(name: "RIBs", type: .dynamic, targets: ["RIBs"])
     ],
     dependencies: [
-         .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "5.0.0"),
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.0.0")),
     ],
     targets: [
         .target(
